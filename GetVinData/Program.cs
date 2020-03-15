@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Net.Http;
-using static GetVinData.Data.Data;
+using static GetVinData.Data.NHTSA_API_Data;
 
 namespace GetVinData
 {

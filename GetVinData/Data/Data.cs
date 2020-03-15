@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GetVinData.Data
 {
-    public class Data
+    public class NHTSA_API_Data
     {
         public class VehicleData
         {

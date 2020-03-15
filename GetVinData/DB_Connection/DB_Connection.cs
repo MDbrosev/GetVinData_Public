@@ -14,6 +14,7 @@ namespace GetVinData.DB_Connection
         public List<string> GetVINs()
         {
             var con = @"";
+                //ConfigurationManager.ConnectionStrings["Yourconnection"].ToString();
 
             List<string> vin_numbers = new List<string>();
 

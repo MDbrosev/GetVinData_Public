@@ -27,6 +27,6 @@ namespace GetVinData.Data
 
     public class VINs_To_Query
     {
-        public string vin { get; set; }        
+        public string Vin { get; set; }        
     }
 }

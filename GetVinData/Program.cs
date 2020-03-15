@@ -30,13 +30,13 @@ namespace GetVinData
             }
         }
 
-        public static void ParseVIN(string oldVIN)
+        private static void ParseVIN(string oldVIN)
         {
             string newString = oldVIN.Remove(0, 4);
             Console.WriteLine(newString);
         }
 
-        public static void ParseTrim(VehicleData vehicledata)
+        private static void ParseTrim(VehicleData vehicledata)
         {
             if (vehicledata == null)
             {

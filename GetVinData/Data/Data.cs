@@ -24,4 +24,9 @@ namespace GetVinData.Data
             public int VariableId { get; set; }
         }
     }
+
+    public class VINs_To_Query
+    {
+        public string vin { get; set; }        
+    }
 }

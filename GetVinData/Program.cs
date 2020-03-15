@@ -1,5 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using GetVinData.Data;
+using Newtonsoft.Json;
 using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Net.Http;
 using static GetVinData.Data.NHTSA_API_Data;
 
@@ -105,16 +108,17 @@ namespace GetVinData
             }
         }
 
-        //TODO: method to pull all of the vins for new + on order + sold cars
-
-        //TODO: method to insert the new vins with trims to database
-
         static void Main(string[] args)
-        {
-            string vin = "";
+        {            
+            DB_Connection.DB_Connection db = new DB_Connection.DB_Connection();
+            var vins = db.GetVINs();
 
-            //Change the link to decode batch
-            GetRequest("https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/" + vin + "?format=json");
+            foreach (var vin in vins)
+            {
+                GetRequest("https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/" + vin + "?format=json");
+            }
+
+
             Console.ReadKey();
         }
     }

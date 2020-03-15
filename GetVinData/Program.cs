@@ -111,7 +111,7 @@ namespace GetVinData
 
         static void Main(string[] args)
         {
-            string vin = "3VWN57BU7KM211631";
+            string vin = "";
 
             //Change the link to decode batch
             GetRequest("https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/" + vin + "?format=json");
